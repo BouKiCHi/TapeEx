@@ -1,0 +1,7 @@
+src/bin
+src/obj
+src/tests/data
+
+*.wav
+src/tests/output.*
+output.*

@@ -1,0 +1,40 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run test.ps1",
+            "command": "./test.ps1",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/src/tests"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "make with .NET framework",
+            "command": "make",
+            "type": "process",
+            "options": {
+                "cwd": "${workspaceFolder}/src"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "build",
+            "command": "dotnet build",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/src"
+            },
+            "group": "build",
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        }
+    ]
+}
